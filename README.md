@@ -4,7 +4,7 @@
 
 - 安装
 ```
-wget -O install-shadowsocks.sh https://gitee.com/sunbeyond/install.sh/raw/master/shadowsocks/install-shadowsocks.sh
+wget -O install-shadowsocks.sh https://gitee.com/sunbeyond/install.sh/raw/master/install-shadowsocks.sh
 chmod +x install-shadowsocks.sh && ./install-shadowsocks.sh
 ```
 - github源：https://raw.githubusercontent.com/sunbeyond/install.sh/master/install-shadowsocks.sh
