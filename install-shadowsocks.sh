@@ -19,6 +19,11 @@ GET_PIP_FILE=/tmp/get-pip.py
 curl "https://bootstrap.pypa.io/get-pip.py" -o "${GET_PIP_FILE}"
 python ${GET_PIP_FILE}
 
+# install libsodium
+if [ ! -f /usr/lib/libsodium.a ]; then
+    yum install libsodium
+fi
+
 # install shadowsocks
 pip install --upgrade pip
 pip install shadowsocks
@@ -55,7 +60,6 @@ sleep 5
 systemctl status shadowsocks -l
 
 echo "================================"
-echo ""
 echo "Congratulations! Shadowsocks has been installed on your system."
 echo "You shadowsocks connection info:"
 echo "--------------------------------"
@@ -63,4 +67,4 @@ echo "server:      ${SS_IP}"
 echo "server_port: ${SS_PORT}"
 echo "password:    ${SS_PASSWORD}"
 echo "method:      ${SS_METHOD}"
-echo "--------------------------------"
+echo "================================"
